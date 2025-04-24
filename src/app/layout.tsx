@@ -13,7 +13,7 @@ const RootLayout = ({ children }: RootLayoutProps) => {
       lang="en"
       suppressHydrationWarning
     >
-      <body className="">
+      <body className="scroll-smooth bg-scroll">
         <ThemeProvider
           attribute={"class"}
           enableSystem={true}

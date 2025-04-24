@@ -10,10 +10,13 @@ const Section = ({
   return (
     <>
       <section
-        className="border-primary grid h-dvh place-content-center border-2"
+        className="border-primary h-dvh border border-dashed"
         id={sectionName}
       >
-        {children}
+        <h1 className="p-4 text-2xl capitalize sm:text-3xl lg:text-4xl">
+          {sectionName}
+        </h1>
+        <div className="grid place-content-center">{children}</div>
       </section>
     </>
   );
