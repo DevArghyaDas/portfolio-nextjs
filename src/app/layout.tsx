@@ -16,7 +16,7 @@ const RootLayout = ({ children }: RootLayoutProps) => {
       <body className="">
         <ThemeProvider
           attribute={"class"}
-          enableSystem={false}
+          enableSystem={true}
         >
           <Header />
 
