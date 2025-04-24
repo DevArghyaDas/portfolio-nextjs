@@ -2,25 +2,59 @@
 
 import { MoonStar, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
+import { Button } from "../ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuLabel,
+  DropdownMenuRadioGroup,
+  DropdownMenuRadioItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "../ui/dropdown-menu";
 
 const ThemeToggleButton = () => {
   const { theme, setTheme } = useTheme();
 
   return (
-    <button
-      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="flex items-center"
-    >
-      <Sun
-        size={28}
-        className="scale-100 opacity-100 transition-all duration-300 dark:scale-0 dark:opacity-0"
-      />
-
-      <MoonStar
-        size={28}
-        className="absolute scale-0 opacity-0 transition-all duration-300 dark:scale-100 dark:opacity-100"
-      />
-    </button>
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button
+          variant="ghost"
+          className="cursor-pointer"
+        >
+          <Sun className="dark:hidden" />
+          <MoonStar className="not-dark:hidden dark:flex" />
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent className="w-40">
+        <DropdownMenuLabel className="text-center">Themes</DropdownMenuLabel>
+        <DropdownMenuSeparator />
+        <DropdownMenuRadioGroup
+          value={theme}
+          className="*:cursor-pointer"
+        >
+          <DropdownMenuRadioItem
+            value="light"
+            onSelect={() => setTheme("light")}
+          >
+            Light
+          </DropdownMenuRadioItem>
+          <DropdownMenuRadioItem
+            value="dark"
+            onSelect={() => setTheme("dark")}
+          >
+            Dark
+          </DropdownMenuRadioItem>
+          <DropdownMenuRadioItem
+            value="system"
+            onSelect={() => setTheme("system")}
+          >
+            System
+          </DropdownMenuRadioItem>
+        </DropdownMenuRadioGroup>
+      </DropdownMenuContent>
+    </DropdownMenu>
   );
 };
 
