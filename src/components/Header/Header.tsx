@@ -1,4 +1,5 @@
 import ThemeToggleButton from "../ui/ThemeToggleButton";
+import MenuBarMobile from "./MenuBarMobile";
 
 const Header = () => {
   return (
@@ -7,7 +8,7 @@ const Header = () => {
         <div className="container mx-auto flex items-center justify-between px-6 py-3">
           <h1 className="text-2xl font-semibold">_Arghya_Das</h1>
 
-          <nav className="flex items-center gap-4 capitalize">
+          <nav className="hidden items-center gap-4 capitalize md:flex">
             <ThemeToggleButton />
             <a href="#index">index</a>
             <a href="#about">about</a>
@@ -15,6 +16,9 @@ const Header = () => {
             <a href="#projects">projects</a>
             <a href="#contact">contact</a>
           </nav>
+          <div className="flex md:hidden">
+            <MenuBarMobile />
+          </div>
         </div>
       </header>
     </>

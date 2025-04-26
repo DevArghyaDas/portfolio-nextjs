@@ -6,8 +6,8 @@ import Skills from "@/components/HeroComponents/Skills";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Home | Nextjs Starter Template",
-  description: "Hpme page of Nextjs Starter Template",
+  title: "Arghya Das",
+  description: "Index Page",
 };
 
 const page = () => {
