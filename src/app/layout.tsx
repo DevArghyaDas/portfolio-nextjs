@@ -2,6 +2,7 @@ import Header from "@/components/Header/Header";
 import ThemeProvider from "@/components/ThemeProvider";
 import "./globals.css";
 import Footer from "@/components/Footer/Footer";
+import ScrollProgressBar from "@/components/ui/ScrollProgressBar";
 
 type RootLayoutProps = Readonly<{
   children: React.ReactNode;
@@ -18,6 +19,7 @@ const RootLayout = ({ children }: RootLayoutProps) => {
           attribute={"class"}
           enableSystem={true}
         >
+          <ScrollProgressBar />
           <Header />
 
           <main className="container mx-auto px-6">{children}</main>
