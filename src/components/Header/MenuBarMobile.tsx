@@ -1,10 +1,10 @@
 "use client";
 
 import {
-  AlignJustify,
   Dumbbell,
   FolderGit2,
   HousePlus,
+  Kanban,
   Phone,
   SquareUser,
 } from "lucide-react";
@@ -22,7 +22,10 @@ const MenuBarMobile = () => {
     <>
       <Drawer>
         <DrawerTrigger className="group">
-          <AlignJustify />
+          <Kanban
+            className="-rotate-90"
+            size={32}
+          />
         </DrawerTrigger>
         <DrawerContent>
           <DrawerHeader>

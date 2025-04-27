@@ -2,7 +2,6 @@
 
 import { MoonStar, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
-import { Button } from "../ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -15,17 +14,15 @@ import {
 
 const ThemeToggleButton = () => {
   const { theme, setTheme } = useTheme();
+  // const[open,setOpen]= useState<Boolean>(false)
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button
-          variant="ghost"
-          className="cursor-pointer"
-        >
+        <button className="cursor-pointer px-3 py-2">
           <Sun className="dark:hidden" />
           <MoonStar className="not-dark:hidden dark:flex" />
-        </Button>
+        </button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-40">
         <DropdownMenuLabel className="text-center">Themes</DropdownMenuLabel>
