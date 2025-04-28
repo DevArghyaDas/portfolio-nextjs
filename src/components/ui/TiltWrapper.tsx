@@ -7,13 +7,12 @@ const TiltWrapper = ({ children }: { children: ReactNode }) => {
   return (
     <>
       <Tilty
-        className="w-fit"
-        glare={true}
+        className="h-fit w-fit transform-3d"
+        glare
         maxGlare={0.4}
-        gyroscopeMaxAngleX={5}
-        gyroscopeMinAngleX={-5}
-        gyroscopeMaxAngleY={5}
-        gyroscopeMinAngleY={-5}
+        scale={1.04}
+        easing="cubic-bezier(.25,.62,.83,.67)"
+        speed={600}
       >
         {children}
       </Tilty>

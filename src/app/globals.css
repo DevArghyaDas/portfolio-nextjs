@@ -122,3 +122,29 @@
     @apply bg-background text-foreground;
   }
 }
+.custom-hover {
+  position: relative;
+  overflow: hidden;
+  transition: 300ms ease-in;
+}
+.custom-hover::before {
+  content: "";
+  position: absolute;
+  height: 300%;
+  width: 300%;
+  left: -40%;
+  top: -40%;
+  border-radius: 99px;
+  transform: scale(0);
+  background: var(--foreground);
+  z-index: -1;
+  transform-origin: left;
+  transition: 300ms ease-in;
+}
+.custom-hover:hover::before {
+  transform: scale(1);
+  transition: 600ms ease-out;
+}
+.custom-hover:hover {
+  color: var(--accent);
+}
