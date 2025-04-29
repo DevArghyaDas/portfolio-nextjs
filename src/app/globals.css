@@ -122,6 +122,10 @@
     @apply bg-background text-foreground;
   }
 }
+::selection {
+  background: var(--foreground);
+  color: var(--background);
+}
 .custom-hover {
   position: relative;
   overflow: hidden;

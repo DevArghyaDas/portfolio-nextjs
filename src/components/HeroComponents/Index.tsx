@@ -15,14 +15,12 @@ const Index = () => {
             <div className="text-xl">
               Fullstack devoloper | Desinger | Digital Creator
             </div>
-            <div className="line line-clamp-3 leading-6 tracking-wide text-balance">
-              <a href="#about">
-                I'm a full-stack web developer and designer who thrives on
-                building seamless digital experiences from concept to launch.I
-                embrace a design philosophy that prioritizes simplicity and
-                user-centricity, ensuring that every interface I craft not only
-                looks great but performs flawlessly.{" "}
-              </a>
+            <div className="line-clamp-3 leading-6 tracking-wide text-balance">
+              I'm a full-stack web developer and designer who thrives on
+              building seamless digital experiences from concept to launch.I
+              embrace a design philosophy that prioritizes simplicity and
+              user-centricity, ensuring that every interface I craft not only
+              looks great but performs flawlessly.
             </div>
             <div className="flex items-center justify-center gap-4 *:border *:p-3 md:justify-start">
               <a
@@ -41,18 +39,18 @@ const Index = () => {
           </div>
           {/* second container */}
           <div className="relative grid h-[70dvh] grid-cols-2">
-            <div className="relative h-[35dvh] border border-dashed border-r-teal-500 border-b-fuchsia-400 font-mono font-bold tracking-widest">
+            <div className="relative h-[35dvh] border-r border-b border-dashed border-r-teal-500 border-b-fuchsia-400 font-mono font-bold tracking-widest">
               <span className="absolute top-[20%] -right-10 -rotate-90">
                 &larr; y axis &rarr;
               </span>
             </div>
             <div className="h-[35dvh]" />
             <div className="h-[35dvh]" />
-            <div className="relative h-[35dvh] border border-dashed border-t-fuchsia-400 border-l-teal-500 font-mono font-bold tracking-widest">
+            <div className="relative h-[35dvh] border-t border-l border-dashed border-t-fuchsia-400 border-l-teal-500 font-mono font-bold tracking-widest">
               <span className="absolute right-10">&larr; x axis &rarr;</span>
             </div>
             <div className="group absolute grid h-full w-full place-items-center">
-              <div className="h-64 w-64 border shadow-2xl md:h-80 md:w-80">
+              <div className="aspect-square border object-cover shadow-2xl">
                 <TiltWrapper>
                   <IndexCard />
                 </TiltWrapper>

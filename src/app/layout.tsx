@@ -22,7 +22,7 @@ const RootLayout = ({ children }: RootLayoutProps) => {
           <ScrollProgressBar />
           <Header />
 
-          <main className="container mx-auto px-6">{children}</main>
+          <main className="container mx-auto">{children}</main>
           <Footer />
         </ThemeProvider>
       </body>

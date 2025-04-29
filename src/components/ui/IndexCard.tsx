@@ -1,14 +1,17 @@
+"use client";
 import Image from "next/image";
 
 const IndexCard = () => {
   return (
-    <Image
-      src="/media/masked-picture.png"
-      alt="Image"
-      className="relative bottom-10 left-5 h-auto w-auto translate-z-[70px] scale-90 rounded-md object-cover grayscale-100 md:scale-90"
-      height={300}
-      width={300}
-    />
+    <div className="relative left-3 h-full w-full scale-75 transform-3d md:scale-90">
+      <Image
+        src="/media/arghya-clip.png"
+        alt="Image"
+        className="h-auto w-auto translate-y-4 translate-z-20 rotate-3 object-cover grayscale-100 hover:grayscale-50"
+        width={350}
+        height={350}
+      />
+    </div>
   );
 };
 
