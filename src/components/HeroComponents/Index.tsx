@@ -10,13 +10,13 @@ const Index = () => {
           {/* first container */}
           <div className="flex flex-col justify-center gap-6 px-2 py-4 text-center md:text-start">
             <h1 className="text-2xl tracking-wide md:text-4xl lg:text-5xl">
-              Hi,I'm <span className="font-mono">Arghya Das.</span>
+              Hi,I&apos;m <span className="font-mono">Arghya Das.</span>
             </h1>
             <div className="text-xl">
               Fullstack devoloper | Desinger | Digital Creator
             </div>
             <div className="line-clamp-3 leading-6 tracking-wide text-balance">
-              I'm a full-stack web developer and designer who thrives on
+              I&apos;m a full-stack web developer and designer who thrives on
               building seamless digital experiences from concept to launch.I
               embrace a design philosophy that prioritizes simplicity and
               user-centricity, ensuring that every interface I craft not only

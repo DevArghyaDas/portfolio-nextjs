@@ -152,3 +152,28 @@
 .custom-hover:hover {
   color: var(--accent);
 }
+.parallax-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Ensure it stays behind the slide content */
+}
+
+.slide-content {
+  position: relative;
+  padding: 20px;
+  color: white;
+}
+.custom-swiper-pagination {
+  background: #fff;
+  height: 2rem;
+  width: 2rem;
+}
+.text-shadow-custom {
+  text-shadow:
+    0 0 10px #ffffff8c,
+    0 5px 10px #ffffff4a,
+    0 -5px 10px #ffffff4a;
+}

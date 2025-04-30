@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 
 type OptionType = {
-  root: any;
+  root: null;
   rootMargin: string;
   threshold: number;
 };

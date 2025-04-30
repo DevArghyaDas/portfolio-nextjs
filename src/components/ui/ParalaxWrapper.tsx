@@ -1,31 +1,32 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { ReactNode } from "react";
 
 const ParalaxWrapper = ({ children }: { children: ReactNode }) => {
+  const ValVariants: Variants = {
+    offscreen: {
+      y: 25,
+      opacity: 0.3,
+    },
+    onscreen: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: "tween",
+        duration: 0.4,
+        delay: 0.2,
+      },
+    },
+  };
   return (
-    <AnimatePresence mode="popLayout">
-      <motion.div
-        initial={{
-          opacity: 0,
-          y: 30,
-        }}
-        whileInView={{
-          opacity: 1,
-          y: 0,
-        }}
-        exit={{ opacity: 0, y: -20 }}
-        viewport={{ amount: 0.8, once: true }}
-        transition={{
-          type: "tween",
-          duration: 0.6,
-          delay: 0.1,
-        }}
-      >
-        {children}
-      </motion.div>
-    </AnimatePresence>
+    <motion.div
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ amount: 0.2, once: true }}
+    >
+      <motion.div variants={ValVariants}>{children}</motion.div>
+    </motion.div>
   );
 };
 
