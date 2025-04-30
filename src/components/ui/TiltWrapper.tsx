@@ -10,7 +10,6 @@ const TiltWrapper = ({ children }: { children: ReactNode }) => {
         className="relative h-fit w-fit transform-3d"
         glare
         maxGlare={0.4}
-        // perspective={2000}
         easing="cubic-bezier(.25,.62,.83,.67)"
         speed={600}
       >

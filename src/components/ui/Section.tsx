@@ -1,6 +1,6 @@
 "use client";
-import { motion } from "framer-motion";
 import { ReactNode } from "react";
+import ParalaxWrapper from "./ParalaxWrapper";
 
 const Section = ({
   children,
@@ -21,23 +21,7 @@ const Section = ({
           {sectionName}
         </h1>
 
-        <motion.div
-          initial={{
-            opacity: 0.6,
-            translateY: 30,
-          }}
-          whileInView={{
-            opacity: 1,
-            translateY: 0,
-          }}
-          viewport={{ amount: 0.8, once: true }}
-          transition={{
-            type: "tween",
-            duration: 0.4,
-          }}
-        >
-          {children}
-        </motion.div>
+        <ParalaxWrapper>{children}</ParalaxWrapper>
       </section>
     </>
   );
