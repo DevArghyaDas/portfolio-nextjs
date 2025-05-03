@@ -1,6 +1,5 @@
 import IndexCard from "../ui/IndexCard";
 import Section from "../ui/Section";
-import TiltWrapper from "../ui/TiltWrapper";
 
 const Index = () => {
   return (
@@ -49,11 +48,10 @@ const Index = () => {
             <div className="relative h-[35dvh] border-t border-l border-dashed border-t-fuchsia-400 border-l-teal-500 font-mono font-bold tracking-widest">
               <span className="absolute right-10">&larr; x axis &rarr;</span>
             </div>
+            {/* card container */}
             <div className="group absolute grid h-full w-full place-items-center">
-              <div className="aspect-square border object-cover shadow-2xl">
-                <TiltWrapper>
-                  <IndexCard />
-                </TiltWrapper>
+              <div className="border object-cover shadow-2xl">
+                <IndexCard />
               </div>
             </div>
           </div>
