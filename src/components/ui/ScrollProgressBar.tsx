@@ -18,7 +18,7 @@ const ScrollProgressBar = () => {
         originX: 0,
         // backgroundColor: "#22c55e",
       }}
-      className="z-40 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
+      className="z-40 rounded-r-full bg-gradient-to-r from-indigo-500/20 via-purple-500/40 to-pink-500"
     />
   );
 };
