@@ -120,6 +120,7 @@
     @apply bg-background text-foreground;
   }
 }
+
 ::selection {
   background: var(--foreground);
   color: var(--background);

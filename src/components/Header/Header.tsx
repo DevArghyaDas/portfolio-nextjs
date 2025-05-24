@@ -3,6 +3,7 @@ import useActiveSection from "@/hook/useActiveSection";
 import ThemeToggleButton from "../ui/ThemeToggleButton";
 import MenuBarMobile from "./MenuBarMobile";
 import { useEffect, useRef, useState } from "react";
+import EncodeDecodeAnimation from "../ui/EncodeDecodeAnimation";
 
 const Header = () => {
   const [visible, setVisible] = useState(true);
@@ -24,11 +25,13 @@ const Header = () => {
   }, []);
 
   const sections = ["index", "about", "skills", "projects", "contact"];
+
   const activeSection = useActiveSection(sections, {
     root: null,
     rootMargin: "0px",
     threshold: 0.5,
   });
+
   return (
     <>
       <header
@@ -39,7 +42,9 @@ const Header = () => {
         }}
       >
         <div className="container mx-auto flex items-center justify-between border-r border-l border-dashed px-2 py-3">
-          <h1 className="text-2xl font-semibold">_Arghya_Das</h1>
+          <h1 className="text-2xl font-semibold">
+            <EncodeDecodeAnimation text="Arghya Das" />
+          </h1>
           <div className="flex w-full justify-start px-2 md:justify-end">
             <ThemeToggleButton />
           </div>

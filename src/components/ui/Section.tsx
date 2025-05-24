@@ -14,14 +14,16 @@ const Section = ({
   return (
     <>
       <section
-        className={`min-h-dvh border border-dashed ${className}`}
+        className={`max-h-fit min-h-lvh border border-dashed`}
         id={sectionName}
       >
         <h1 className="p-4 text-2xl tracking-wide capitalize sm:text-3xl md:text-center lg:text-4xl">
           {sectionName}
         </h1>
 
-        <ParalaxWrapper className={`relative`}>{children}</ParalaxWrapper>
+        <ParalaxWrapper className={`relative ${className}`}>
+          {children}
+        </ParalaxWrapper>
       </section>
     </>
   );

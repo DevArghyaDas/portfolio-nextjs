@@ -21,7 +21,7 @@ const Index = () => {
               user-centricity, ensuring that every interface I craft not only
               looks great but performs flawlessly.
             </div>
-            <div className="flex items-center justify-center gap-4 *:border *:p-3 md:justify-start">
+            <div className="flex items-center justify-center gap-4 *:rounded-sm *:border *:p-3 md:justify-start">
               <a
                 href="#about"
                 className="custom-hover"

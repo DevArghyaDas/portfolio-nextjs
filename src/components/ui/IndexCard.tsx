@@ -10,7 +10,7 @@ const IndexCard = () => {
         <div className="h-full w-full scale-105 rotate-1 bg-[url('/media/arghya-bg.png')] bg-cover">
           <TiltWrapper>
             <Image
-              src="/media/arghya-body.png"
+              src="/media/arghya-clip.png"
               alt="Image"
               className="h-auto w-auto -translate-x-1 translate-y-5 translate-z-20 scale-[84%] object-cover grayscale-100 hover:grayscale-50"
               width={350}

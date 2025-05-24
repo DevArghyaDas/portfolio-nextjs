@@ -1,10 +1,11 @@
+import AllDataRender from "../ui/projectCards/AllDataRender";
 import Section from "../ui/Section";
 
-const Projects = () => {
+const Projects = async () => {
   return (
     <>
       <Section sectionName="projects">
-        <div className="text-3xl"> Project Section</div>
+        <AllDataRender />
       </Section>
     </>
   );

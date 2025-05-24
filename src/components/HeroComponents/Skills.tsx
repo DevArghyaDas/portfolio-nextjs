@@ -40,7 +40,7 @@ const animatedBackgroundStyleR: CSSProperties = {
 const AnimateBg = () => {
   return (
     <>
-      <div className="absolute h-full w-full overflow-hidden rounded-xl border">
+      <div className="absolute top-0 left-0 h-full w-full overflow-hidden">
         <div style={animatedBackgroundStyle} />
         <div style={animatedBackgroundStyleR} />
       </div>
