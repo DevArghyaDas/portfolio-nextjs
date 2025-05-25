@@ -1,11 +1,11 @@
+import { NeonGradientCard } from "../magicui/neon-gradient-card";
 import IndexCard from "../ui/IndexCard";
-import Section from "../ui/Section";
 
 const Index = () => {
   return (
     <>
-      <Section sectionName="index">
-        <div className="grid grid-cols-1 *:border md:grid-cols-2">
+      <section id="index">
+        <div className="grid min-h-[90lvh] grid-cols-1 md:grid-cols-2">
           {/* first container */}
           <div className="flex flex-col justify-center gap-6 px-2 py-4 text-center md:text-start">
             <h1 className="text-2xl tracking-wide md:text-4xl lg:text-5xl">
@@ -37,26 +37,19 @@ const Index = () => {
             </div>
           </div>
           {/* second container */}
-          <div className="relative grid h-[70dvh] grid-cols-2">
-            <div className="relative h-[35dvh] border-r border-b border-dashed border-r-teal-500 border-b-fuchsia-400 font-mono font-bold tracking-widest">
-              <span className="absolute top-[20%] -right-10 -rotate-90">
-                &larr; y axis &rarr;
-              </span>
-            </div>
-            <div className="h-[35dvh]" />
-            <div className="h-[35dvh]" />
-            <div className="relative h-[35dvh] border-t border-l border-dashed border-t-fuchsia-400 border-l-teal-500 font-mono font-bold tracking-widest">
-              <span className="absolute right-10">&larr; x axis &rarr;</span>
-            </div>
-            {/* card container */}
-            <div className="group absolute grid h-full w-full place-items-center">
-              <div className="border object-cover shadow-2xl">
+          <div className="grid h-full w-full place-items-center content-center">
+            <div className="w-[70%] md:w-[350px]">
+              <NeonGradientCard
+                neonColors={{ firstColor: "#7e22ce", secondColor: "#06b6d4" }}
+                borderSize={2}
+                borderRadius={5}
+              >
                 <IndexCard />
-              </div>
+              </NeonGradientCard>
             </div>
           </div>
         </div>
-      </Section>
+      </section>
     </>
   );
 };

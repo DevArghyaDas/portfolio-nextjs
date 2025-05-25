@@ -3,7 +3,7 @@ import { motion, useScroll, useSpring } from "framer-motion";
 
 const ScrollProgressBar = () => {
   const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress, { stiffness: 30, damping: 10 });
+  const scaleX = useSpring(scrollYProgress, { stiffness: 10, damping: 10 });
 
   return (
     <motion.div
@@ -11,14 +11,14 @@ const ScrollProgressBar = () => {
       style={{
         scaleX: scaleX,
         position: "fixed",
-        top: 0,
+        top: 50,
         left: 0,
         right: 0,
-        height: 15,
+        height: 20,
         originX: 0,
         // backgroundColor: "#22c55e",
       }}
-      className="z-40 rounded-r-full bg-gradient-to-r from-indigo-500/20 via-purple-500/40 to-pink-500"
+      className="z-40 bg-linear-to-r/increasing from-teal-400 to-indigo-500"
     />
   );
 };

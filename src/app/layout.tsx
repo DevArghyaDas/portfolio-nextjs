@@ -4,6 +4,7 @@ import ThemeProvider from "@/components/ThemeProvider";
 import ScrollProgressBar from "@/components/ui/ScrollProgressBar";
 import "./globals.css";
 import { CSSProperties } from "react";
+import GridForBg from "@/components/ui/GridForBg";
 
 type RootLayoutProps = Readonly<{
   children: React.ReactNode;
@@ -27,7 +28,8 @@ const RootLayout = ({ children }: RootLayoutProps) => {
         >
           <ScrollProgressBar />
           <Header />
-          <main className="container mx-auto">{children}</main>
+          <GridForBg />
+          <main className="container mx-auto max-w-5xl border">{children}</main>
           <Footer />
         </ThemeProvider>
       </body>
