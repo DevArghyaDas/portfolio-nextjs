@@ -14,7 +14,8 @@ const ThemeToggleButton = () => {
         background="var(--muted-foreground)"
         shimmerSize="3px"
         shimmerColor="var(--background)"
-        className="shadow-2xl"
+        className="p-2 shadow-2xl"
+        borderRadius="5px"
         onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       >
         <MoonStar className="dark:hidden" />

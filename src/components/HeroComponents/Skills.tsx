@@ -1,5 +1,5 @@
-import { CSSProperties } from "react";
-import Section from "../ui/Section";
+import { chartArrey, chartData } from "@/lib/chartData";
+
 import {
   Card,
   CardContent,
@@ -8,57 +8,20 @@ import {
   CardTitle,
 } from "../ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
-import { chartArrey, chartData } from "@/lib/chartData";
-import SkillCharts from "../ui/recharts/SkillCharts";
+import SkillCard from "../ui/skills/SkillCard";
 
-const animatedBackgroundStyle: CSSProperties = {
-  position: "absolute",
-  top: "0%",
-  left: "0",
-  width: "120%",
-  height: "50%",
-  zIndex: -1,
-  transform: "rotate(-20deg) translateX(-15%)",
-  backgroundImage: 'url("/media/background-for-skill-2.png")',
-  backgroundRepeat: "repeat-x",
-  backgroundSize: "auto",
-  animation: "slide 90s linear infinite",
-};
-const animatedBackgroundStyleR: CSSProperties = {
-  position: "absolute",
-  top: "50%",
-  left: "0",
-  width: "120%",
-  height: "50%",
-  zIndex: -1,
-  transform: "rotate(-20deg) translateX(-10%)",
-  backgroundImage: 'url("/media/bgackground-for-skill-3.png")',
-  backgroundRepeat: "repeat-x",
-  backgroundSize: "auto",
-  animation: "slide2 90s linear infinite",
-};
-const AnimateBg = () => {
-  return (
-    <>
-      <div className="absolute top-0 left-0 h-full w-full overflow-hidden">
-        <div style={animatedBackgroundStyle} />
-        <div style={animatedBackgroundStyleR} />
-      </div>
-    </>
-  );
-};
 const Skills = () => {
   return (
     <>
-      <Section
-        sectionName="skills"
-        className={"p-2"}
+      <section
+        id="skills"
+        className="p-2"
       >
-        <AnimateBg />
+        <h1 className="py-6 text-center text-3xl">Skills</h1>
 
-        <Card className="bg-background/20 rounded-none backdrop-blur-xs">
+        <Card className="bg-background/20 relative backdrop-blur-xs">
           <CardHeader>
-            <CardTitle className="text-center text-xl">Skill Charts</CardTitle>
+            <CardTitle className="text-center text-xl">Skill Tab</CardTitle>
             <CardDescription className="text-center">
               I ensure that every line of code contributes to an engaging,
               accessible, and high-performance digital experience.Here are some
@@ -67,7 +30,10 @@ const Skills = () => {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <Tabs defaultValue="coreconcept">
+            <Tabs
+              defaultValue="coreconcept"
+              className=""
+            >
               <TabsList className="w-full gap-2 *:cursor-pointer *:capitalize">
                 {chartArrey.map((i) => (
                   <TabsTrigger
@@ -85,13 +51,21 @@ const Skills = () => {
                   key={i}
                   value={i}
                 >
-                  <SkillCharts data={chartData[i]} />
+                  <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-4">
+                    {chartData[i].map((i) => (
+                      <SkillCard
+                        key={i.tropic}
+                        tropic={i.tropic}
+                        imgUrl={i.imgUrl}
+                      />
+                    ))}
+                  </div>
                 </TabsContent>
               ))}
             </Tabs>
           </CardContent>
         </Card>
-      </Section>
+      </section>
     </>
   );
 };

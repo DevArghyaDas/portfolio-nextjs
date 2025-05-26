@@ -1,9 +1,10 @@
 "use client";
-import useActiveSection from "@/hook/useActiveSection";
+
 import Link from "next/link";
 import EncodeDecodeAnimation from "../ui/EncodeDecodeAnimation";
 import ThemeToggleButton from "../ui/ThemeToggleButton";
 import MenuBarMobile from "./MenuBarMobile";
+import useActiveSection from "@/hooks/useActiveSection";
 
 const Header = () => {
   const sections = ["index", "about", "skills", "projects", "contact"];
@@ -17,7 +18,7 @@ const Header = () => {
   return (
     <>
       <header className="sticky top-0 z-50 border-b backdrop-blur-2xl">
-        <div className="container mx-auto flex max-w-5xl items-center justify-between border-r border-l border-dashed px-2 py-4">
+        <div className="container mx-auto flex max-w-5xl items-center justify-between px-2 py-4">
           <h1 className="text-2xl font-semibold">
             <EncodeDecodeAnimation text="_arghya_das" />
           </h1>

@@ -1,5 +1,5 @@
+import Image from "next/image";
 import { NeonGradientCard } from "../magicui/neon-gradient-card";
-import IndexCard from "../ui/IndexCard";
 
 const Index = () => {
   return (
@@ -37,16 +37,22 @@ const Index = () => {
             </div>
           </div>
           {/* second container */}
-          <div className="grid h-full w-full place-items-center content-center">
-            <div className="w-[70%] md:w-[350px]">
-              <NeonGradientCard
-                neonColors={{ firstColor: "#7e22ce", secondColor: "#06b6d4" }}
-                borderSize={2}
-                borderRadius={5}
-              >
-                <IndexCard />
-              </NeonGradientCard>
-            </div>
+          <div className="grid h-full w-full place-content-center p-2 md:items-center md:justify-end">
+            <NeonGradientCard
+              neonColors={{ firstColor: "#d33682", secondColor: "#2aa198" }}
+              borderSize={2}
+              borderRadius={2}
+              className="h-fit w-fit"
+            >
+              <Image
+                src="/media/mask-official-arghya-ss.png"
+                alt="Image"
+                className="w-[300px] rounded-lg grayscale-0 sm:w-[360px]"
+                width={720}
+                height={1080}
+                priority={true}
+              />
+            </NeonGradientCard>
           </div>
         </div>
       </section>

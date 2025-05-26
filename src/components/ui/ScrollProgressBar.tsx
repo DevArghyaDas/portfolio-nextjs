@@ -1,17 +1,17 @@
 "use client";
-import { motion, useScroll, useSpring } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 
 const ScrollProgressBar = () => {
   const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress, { stiffness: 10, damping: 10 });
+  // const scaleX = useSpring(scrollYProgress, { stiffness: 10, damping: 10 });
 
   return (
     <motion.div
       id="scroll-indicator"
       style={{
-        scaleX: scaleX,
+        scaleX: scrollYProgress,
         position: "fixed",
-        top: 50,
+        top: 57,
         left: 0,
         right: 0,
         height: 20,

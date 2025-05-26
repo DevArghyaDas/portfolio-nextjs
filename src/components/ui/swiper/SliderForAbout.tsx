@@ -1,13 +1,13 @@
 "use client";
-import { Pagination, Parallax } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import "swiper/css";
-import "swiper/css/pagination";
-// import "swiper/css/navigation";
-import "swiper/css/parallax";
 import dataForSlider from "@/lib/dataForSlider";
 import { useState } from "react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import "swiper/css/parallax";
+import { Navigation, Pagination, Parallax } from "swiper/modules";
 
 const SliderForAbout = () => {
   const [visible, setVisible] = useState(false);
@@ -26,24 +26,26 @@ const SliderForAbout = () => {
         speed={600}
         parallax={true}
         pagination={pagination}
-        navigation={true}
-        modules={[Parallax, Pagination]}
+        navigation={{
+          enabled: true,
+        }}
+        modules={[Parallax, Pagination, Navigation]}
         className="mySwiper"
       >
         {/* Parallax background element */}
         <div
           slot="container-start"
-          className="parallax-bg before:to-background relative before:absolute before:h-full before:w-[150%] before:bg-gradient-to-r before:from-slate-500/30 before:from-10% before:to-60% before:content-['']"
+          className="parallax-bg before:to-background relative before:absolute before:h-full before:w-[150%] before:bg-gradient-to-r before:from-slate-500/20 before:from-10% before:to-65% before:backdrop-blur-xs before:content-[''] not-dark:before:from-slate-500/55"
           data-swiper-parallax="-23%"
           style={{
-            backgroundImage: "url('media/code2.jpg')",
+            backgroundImage: "url('media/coading.jpg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         />
         {dataForSlider.map((info) => (
           <SwiperSlide key={info.id}>
-            <div className="text-shadow-custom flex max-h-fit min-h-[80dvh] w-full flex-col justify-center gap-4 p-2 md:p-4">
+            <div className="flex max-h-fit min-h-[80dvh] w-full flex-col justify-center gap-4 p-2 md:p-4">
               <h2
                 className="text-2xl"
                 data-swiper-parallax="-400"
@@ -57,7 +59,7 @@ const SliderForAbout = () => {
                 {info.question}
               </h1>
               <div
-                className={`font-mono text-lg leading-9 text-balance md:text-xl lg:text-2xl ${visible ? "" : "line-clamp-[14]"}`}
+                className={`font-mono leading-9 text-balance md:text-lg lg:text-xl ${visible ? "" : "line-clamp-[14]"}`}
                 data-swiper-parallax="-200"
                 onClick={() => setVisible(!visible)}
               >

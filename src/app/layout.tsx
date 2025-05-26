@@ -29,7 +29,7 @@ const RootLayout = ({ children }: RootLayoutProps) => {
           <ScrollProgressBar />
           <Header />
           <GridForBg />
-          <main className="container mx-auto max-w-5xl border">{children}</main>
+          <main className="container mx-auto max-w-5xl">{children}</main>
           <Footer />
         </ThemeProvider>
       </body>

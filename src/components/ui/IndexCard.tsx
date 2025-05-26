@@ -6,7 +6,7 @@ const IndexCard = () => {
     <Image
       src="/media/mask-official-arghya-ss.png"
       alt="Image"
-      className="h-full w-full rounded-lg grayscale-0"
+      className="h-auto w-auto rounded-lg grayscale-0"
       width={720}
       height={1080}
       priority={true}

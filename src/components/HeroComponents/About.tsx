@@ -1,14 +1,17 @@
-import Section from "../ui/Section";
 import SliderForAbout from "../ui/swiper/SliderForAbout";
 
 const About = () => {
   return (
     <>
-      <Section sectionName="about">
-        <div className="h-full w-full border p-2">
+      <section
+        id="about"
+        className="border-t"
+      >
+        <h1 className="py-6 text-center text-3xl">About</h1>
+        <div className="h-full w-full overflow-hidden rounded-xl border">
           <SliderForAbout />
         </div>
-      </Section>
+      </section>
     </>
   );
 };

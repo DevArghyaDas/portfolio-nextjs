@@ -7,8 +7,8 @@ const GridForBg = () => {
     <>
       <div className="bg-background fixed -z-20 flex h-lvh w-full items-center justify-center overflow-hidden rounded-lg border p-20">
         <AnimatedGridPattern
-          numSquares={30}
-          maxOpacity={0.1}
+          numSquares={40}
+          maxOpacity={0.5}
           duration={3}
           repeatDelay={1}
           className={cn(
