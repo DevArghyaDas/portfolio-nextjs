@@ -18,7 +18,7 @@ const ProjectCardDesktop = ({ info }: { info: Repository }) => {
   return (
     <>
       <div
-        className="relative hidden h-[150lvh] grid-cols-2 gap-2 border lg:grid"
+        className="relative hidden h-[150lvh] grid-cols-2 gap-2 lg:grid"
         ref={ref}
       >
         {/* first-container */}
