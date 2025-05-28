@@ -18,7 +18,7 @@ const ProjectCardMobile = ({ info }: { info: Repository }) => {
 
   return (
     <>
-      <div className="relative flex flex-col border lg:hidden">
+      <div className="relative flex flex-col border md:hidden">
         <div className="w-full overflow-hidden p-2">
           <Swiper
             effect={"creative"}

@@ -5,7 +5,7 @@ const Projects = async () => {
     <>
       <section
         id="projects"
-        className="h-fit"
+        className="relative"
       >
         <h1 className="border-t py-6 text-center text-3xl">Projects</h1>
 

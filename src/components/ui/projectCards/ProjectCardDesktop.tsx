@@ -18,23 +18,23 @@ const ProjectCardDesktop = ({ info }: { info: Repository }) => {
   return (
     <>
       <div
-        className="relative hidden h-[150lvh] grid-cols-2 gap-2 lg:grid"
+        className="relative hidden h-[150lvh] grid-cols-2 gap-2 md:grid"
         ref={ref}
       >
         {/* first-container */}
         <div className="flex h-lvh flex-col items-center justify-center gap-6 p-4">
           <EncodeDecodeAnimation
-            className="text-4xl capitalize"
+            className="text-2xl capitalize lg:text-4xl"
             text={`${info.name}`}
           />
 
-          <div className="text-center text-balance">
+          <div className="line-clamp-4 text-center text-balance">
             {info.description} Lorem ipsum dolor sit amet consectetur
             adipisicing elit. Nam labore nostrum deleniti aperiam, laudantium
             dolor.
           </div>
 
-          <div className="flex flex-wrap items-center gap-3">
+          <div className="flex flex-wrap items-center justify-center gap-3">
             {info.topics.map((i) => (
               <div
                 key={i}
